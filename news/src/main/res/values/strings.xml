@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">News</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="home_page">首页</string>
+    <string name="news_center">新闻中心</string>
+    <string name="intelligence_service">智慧服务</string>
+    <string name="government_guide">政务指南</string>
+    <string name="settings">设置</string>
+
+</resources>
