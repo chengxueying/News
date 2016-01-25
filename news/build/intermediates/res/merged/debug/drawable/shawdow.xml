@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
-    <gradient
-        android:endColor="#80ffffff"
-        android:centerColor="#b3ffffff"
-        android:startColor="#ffffff"/>
-
-</shape>
-<!-- From: file:/E:/News/NewsDemo/news/src/main/res/drawable/shawdow.xml -->
