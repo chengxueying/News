@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:id="@+id/frag_menu">
-    
-
-</FrameLayout>
-<!-- From: file:/E:/News/NewsDemo/news/src/main/res/layout/activity_menu.xml -->

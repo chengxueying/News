@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/home_press2" android:state_pressed="true"/>
-    <item android:drawable="@drawable/home_press2" android:state_checked="true"/>
-    <item android:drawable="@drawable/home2"/>
-
-</selector><!-- From: file:/E:/News/NewsDemo/news/src/main/res/drawable/bottom_tab_home.xml -->
