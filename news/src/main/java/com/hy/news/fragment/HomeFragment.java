@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.hy.news.R;
@@ -26,14 +27,21 @@ import java.util.List;
  * Created by xy on 2016/1/25.
  */
 public class HomeFragment extends BaseFragment {
-    public LazyViewPager lazyViewPager;
+    public LazyViewPager mLazyViewPager;
     public RadioGroup main_radio;
+    private RadioButton mFunction, mNewsCenter, mInService, mGovAffairs, mSetting;
+    private int checkId = R.id.rb_function;
 
     @Override
     protected View initView(LayoutInflater inflater) {
         View view = inflater.inflate(R.layout.fragment_home, null);
-        lazyViewPager = (LazyViewPager) view.findViewById(R.id.viewPage);
+        mLazyViewPager = (LazyViewPager) view.findViewById(R.id.viewPage);
         main_radio = (RadioGroup) view.findViewById(R.id.main_radio);
+        mFunction = (RadioButton) view.findViewById(R.id.rb_function);
+        mNewsCenter = (RadioButton) view.findViewById(R.id.rb_news_center);
+        mInService = (RadioButton) view.findViewById(R.id.rb_intelligence_service);
+        mGovAffairs = (RadioButton) view.findViewById(R.id.rb_government_guide);
+        mSetting = (RadioButton) view.findViewById(R.id.rb_settings);
         return view;
     }
 
@@ -46,9 +54,10 @@ public class HomeFragment extends BaseFragment {
         list.add(new InServicePage(mContext));
         list.add(new GovAffairsPage(mContext));
         list.add(new SettingPage(mContext));
-        lazyViewPager.setAdapter(new ViewPagerAdapter(mContext, list));
+        mLazyViewPager.setAdapter(new ViewPagerAdapter(mContext, list));
         main_radio.setOnCheckedChangeListener(new MyOnCheckedListener());
-        lazyViewPager.setOnPageChangeListener(new LazyViewPager.OnPageChangeListener() {
+        mLazyViewPager.setOffscreenPageLimit(0);
+        mLazyViewPager.setOnPageChangeListener(new LazyViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -56,6 +65,23 @@ public class HomeFragment extends BaseFragment {
 
             @Override
             public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                        mFunction.setChecked(true);
+                        break;
+                    case 1:
+                        mNewsCenter.setChecked(true);
+                        break;
+                    case 2:
+                        mInService.setChecked(true);
+                        break;
+                    case 3:
+                        mGovAffairs.setChecked(true);
+                        break;
+                    case 4:
+                        mSetting.setChecked(true);
+                        break;
+                }
 
 
             }
@@ -74,21 +100,30 @@ public class HomeFragment extends BaseFragment {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
             switch (checkedId) {
                 case R.id.rb_function:
-                    lazyViewPager.setCurrentItem(0, false);
+                    checkId = 0;
+                    mLazyViewPager.setCurrentItem(0, false);
+
                     break;
                 case R.id.rb_news_center:
-                    lazyViewPager.setCurrentItem(1, false);
+                    checkId = 1;
+                    mLazyViewPager.setCurrentItem(1, false);
+
                     break;
                 case R.id.rb_intelligence_service:
-                    lazyViewPager.setCurrentItem(2, false);
+                    checkId = 2;
+                    mLazyViewPager.setCurrentItem(2, false);
+
                     break;
                 case R.id.rb_government_guide:
-                    lazyViewPager.setCurrentItem(3, false);
+                    checkId = 3;
+                    mLazyViewPager.setCurrentItem(3, false);
                     break;
                 case R.id.rb_settings:
-                    lazyViewPager.setCurrentItem(4, false);
+                    checkId = 4;
+                    mLazyViewPager.setCurrentItem(4, false);
                     break;
             }
+            checkId=checkedId;
 
         }
     }
