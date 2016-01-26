@@ -61,7 +61,7 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
         menu.setShadowWidthRes(R.dimen.shadow_width);
         menu.setShadowDrawable(R.drawable.shawdow);
         //设置内容文本的剩余长度
-        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        menu.setBehindOffsetRes(R.dimen.sliding_menu_offset);
 //	   menu.setTouchModeBehind(SlidingMenu.TOUCHMODE_FULLSCREEN);//测拉菜单按钮等的焦点被夺走或失效，所以这个属性最好不好设了
         //设置滑动范围
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
