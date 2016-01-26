@@ -4,13 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
-    <View
+    <com.hy.news.view.LazyViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/viewPage"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.0"
-        class="com.hy.news.view.LazyViewPager"
         />
 
 

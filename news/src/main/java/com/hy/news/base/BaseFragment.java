@@ -20,7 +20,10 @@ public abstract class BaseFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         initData(savedInstanceState);
     }
-
+   //获取添加页面
+    public View getRootView(){
+        return rootView;
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

@@ -64,7 +64,7 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
         menu.setBehindOffsetRes(R.dimen.sliding_menu_offset);
 //	   menu.setTouchModeBehind(SlidingMenu.TOUCHMODE_FULLSCREEN);//测拉菜单按钮等的焦点被夺走或失效，所以这个属性最好不好设了
         //设置滑动范围
-        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
         //设置渐变效果
         menu.setFadeDegree(0.35f);
     }
